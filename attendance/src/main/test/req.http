@@ -1,0 +1,32 @@
+@baseUrl = http://localhost:8471/api/attendance
+
+### Create
+POST {{baseUrl}}
+Content-Type: application/json
+
+{
+  "rollNumber": "101",
+  "studentName": "Asha",
+  "date": "2026-10-28",
+  "status": "Present"
+}
+
+### View all
+GET {{baseUrl}}
+
+### View one (change the id)
+GET {{baseUrl}}/1
+
+### Update (change the id)
+PUT {{baseUrl}}/2
+Content-Type: application/json
+
+{
+  "rollNumber": "101",
+  "studentName": "Asha",
+  "date": "2026-10-28",
+  "status": "Absent"
+}
+
+### Delete (change the id)
+DELETE {{baseUrl}}/2
